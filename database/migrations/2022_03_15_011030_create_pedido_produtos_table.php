@@ -15,12 +15,12 @@ class CreatePedidoProdutosTable extends Migration
     {
         Schema::create('pedido_produtos', function (Blueprint $table) {
             $table->increments('id');
-            $table->usingnedBigInteger('quant_pedido');
-            $table->usingnedBigInteger('pedido_id');
-            $table->usingnedBigInteger('produto_id');
+            $table->unsignedBigInteger('quant_pedido');
+            $table->unsignedBigInteger('pedido_id');
+            $table->unsignedBigInteger('produto_id');
 
-            $table->foreign('pedido_id')->references('id')->on('pedidos')->onDelete('casdade');
-            $table->foreign('produto_id')->references('id')->on('produtos')->onDelete('casdade');
+            $table->foreign('pedido_id')->references('id')->on('pedidos')->onDelete('cascade');
+            $table->foreign('produto_id')->references('id')->on('produtos')->onDelete('cascade');
             $table->timestamps();
         });
     }
