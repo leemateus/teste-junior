@@ -17,7 +17,7 @@ class CreatePedidosTable extends Migration
             $table->increments('id');
             $table->double('total', 6, 2);
             $table->string('status_pedido', 10);
-            $table->usignedInteger('cliente_id');
+            $table->unsignedBigInteger('cliente_id');
             $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
             $table->timestamps();
         });
