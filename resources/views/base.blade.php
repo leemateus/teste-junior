@@ -8,16 +8,13 @@
     <body>
         <ul class="nav justify-content-center">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Viagem</a>
+            <a class="nav-link active" aria-current="page" href="#">Menu Cliente</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Passageiros</a>
+            <a class="nav-link" href="#">Menu Peodutos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Administração</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sair</a>
+            <a class="nav-link" href="#">Menu Compras</a>
           </li>
         </ul>
 

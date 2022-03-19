@@ -24,7 +24,7 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        //
+        return view('produto.create_produto');
     }
 
     /**
@@ -35,7 +35,12 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $produto = Produto::create([
+          'nome' => $request->nome,
+          'quant_prod' => $request->quant_prod,
+          'cod_barra' => $request->cod_barra,
+          'valor_unitario' => $request->valor_unitario,
+        ]);
     }
 
     /**
