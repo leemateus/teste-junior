@@ -14,7 +14,9 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        //
+        $clientes = Cliente::get();
+
+        return view('cliente.listagem_cliente', compact('clientes'));
     }
 
     /**
@@ -63,7 +65,7 @@ class ClienteController extends Controller
      */
     public function edit(Cliente $cliente)
     {
-        //
+        return view('cliente.listar_cliente', compact('cliente'));
     }
 
     /**
@@ -87,5 +89,10 @@ class ClienteController extends Controller
     public function destroy(Cliente $cliente)
     {
         //
+    }
+
+    public function menu()
+    {
+      return view('cliente.menu_cliente');
     }
 }

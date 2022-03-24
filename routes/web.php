@@ -16,10 +16,13 @@ Route::get('/', function () {
 });
 
 //cliente
-Route::get('cliente-create', 'App\Http\Controllers\ClienteController@create')->name('cliente-create');
-Route::post('cliente-store', 'App\Http\Controllers\ClienteController@store')->name('cliente-store');
+Route::get('cliente-create', 'ClienteController@create')->name('create-cliente');
+Route::post('cliente-store', 'ClienteController@store')->name('store-cliente');
+Route::get('cliente-menu', 'ClienteController@menu')->name('menu-cliente');
+Route::get('cliente-index', 'ClienteController@index')->name('index-cliente');
+Route::get('cliente-edit', 'ClienteController@edit')->name('edit-cliente');
 
 
 //produto
-Route::get('produto-create', 'App\Http\Controllers\PedidoController@create')->name('produto-create');
-Route::post('produto-store', 'App\Http\Controllers\PedidoController@store')->name('produto-store');
+Route::get('produto-create', 'PedidoController@create')->name('create-produto');
+Route::post('produto-store', 'PedidoController@store')->name('store-produto');
