@@ -77,7 +77,17 @@ class ClienteController extends Controller
      */
     public function update(Request $request, Cliente $cliente)
     {
-        //
+        $cliente->update([
+          'nome' => $request->nome,
+          'CPF' => $request->CPF,
+          'email' => $request->email,
+        ]);
+
+        $clientes = Cliente::get();
+
+        return view('cliente.listagem_cliente', compact('clientes'));
+
+
     }
 
     /**
