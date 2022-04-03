@@ -19,6 +19,7 @@
       </div>
 
       <a href="{{route('edit-cliente', $cliente->id)}}">Editar dados do Cliente</a>
+      <hr>
     @endforeach
 
   </div>

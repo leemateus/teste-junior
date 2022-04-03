@@ -16,6 +16,8 @@ class ClienteController extends Controller
     {
         $clientes = Cliente::get();
 
+        //dd($clientes);
+
         return view('cliente.listagem_cliente', compact('clientes'));
     }
 
@@ -65,6 +67,7 @@ class ClienteController extends Controller
      */
     public function edit(Cliente $cliente)
     {
+
         return view('cliente.listar_cliente', compact('cliente'));
     }
 

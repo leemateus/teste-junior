@@ -20,7 +20,7 @@ Route::get('cliente-create', 'ClienteController@create')->name('create-cliente')
 Route::post('cliente-store', 'ClienteController@store')->name('store-cliente');
 Route::get('cliente-menu', 'ClienteController@menu')->name('menu-cliente');
 Route::get('cliente-index', 'ClienteController@index')->name('index-cliente');
-Route::get('cliente-edit', 'ClienteController@edit')->name('edit-cliente');
+Route::get('cliente-edit/{cliente}', 'ClienteController@edit')->name('edit-cliente');
 Route::post('cliente-update/{cliente}', 'ClienteController@update')->name('update-cliente');
 
 
