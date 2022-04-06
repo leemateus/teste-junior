@@ -41,6 +41,8 @@ class ProdutoController extends Controller
           'cod_barra' => $request->cod_barra,
           'valor_unitario' => $request->valor_unitario,
         ]);
+
+        return view('base');
     }
 
     /**
@@ -86,5 +88,10 @@ class ProdutoController extends Controller
     public function destroy(Produto $produto)
     {
         //
+    }
+
+    public function menu()
+    {
+      return view('produto.menu_produto');
     }
 }

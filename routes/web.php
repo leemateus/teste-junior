@@ -25,5 +25,7 @@ Route::post('cliente-update/{cliente}', 'ClienteController@update')->name('updat
 
 
 //produto
-Route::get('produto-create', 'PedidoController@create')->name('create-produto');
-Route::post('produto-store', 'PedidoController@store')->name('store-produto');
+Route::get('produto-create', 'ProdutoController@create')->name('create-produto');
+Route::post('produto-store', 'ProdutoController@store')->name('store-produto');
+Route::get('produto-menu', 'ProdutoController@menu')->name('menu-produto');
+Route::get('produto-index', 'ProdutoController@index')->name('index-produto');

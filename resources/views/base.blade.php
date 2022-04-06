@@ -11,7 +11,7 @@
             <a class="nav-link active" aria-current="page" href="{{route('menu-cliente')}}">Menu Cliente</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Menu Produtos</a>
+            <a class="nav-link" href="{{route('menu-produto')}}">Menu Produtos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Menu Compras</a>
