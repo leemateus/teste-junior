@@ -24,6 +24,9 @@
       <input type="text" class="form-control" name="valor_unitario" aria-label="Dollar amount (with dot and two decimal places)" placeholder="{{$produto->valor_unitario}}" disabled>
     </div>
 
+    <a href="{{route('edit-produto', $produto->id)}}">Editar dados do Produto</a>
+    <hr>
+
   @endforeach
 
 @endsection

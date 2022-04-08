@@ -66,7 +66,7 @@ class ProdutoController extends Controller
      */
     public function edit(Produto $produto)
     {
-        //
+        return view('produto.listar_produto', compact('produto'));
     }
 
     /**
@@ -78,7 +78,14 @@ class ProdutoController extends Controller
      */
     public function update(Request $request, Produto $produto)
     {
-        //
+        $produto->update([
+          'nome' => $request->nome,
+          'quant_prod' => $request->quant_prod,
+          'cod_barra' => $request->cod_barra,
+          'valor_unitario' => $request->valor_unitario,
+        ]);
+
+          return view('base');
     }
 
     /**

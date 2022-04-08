@@ -29,3 +29,5 @@ Route::get('produto-create', 'ProdutoController@create')->name('create-produto')
 Route::post('produto-store', 'ProdutoController@store')->name('store-produto');
 Route::get('produto-menu', 'ProdutoController@menu')->name('menu-produto');
 Route::get('produto-index', 'ProdutoController@index')->name('index-produto');
+Route::get('produto-edit/{produto}', 'ProdutoController@edit')->name('edit-produto');
+Route::post('produto-update/{produto}', 'ProdutoController@update')->name('update-produto');
