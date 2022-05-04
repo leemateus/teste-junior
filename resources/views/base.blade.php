@@ -14,7 +14,7 @@
             <a class="nav-link" href="{{route('menu-produto')}}">Menu Produtos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Menu Compras</a>
+            <a class="nav-link" href="{{route('menu-pedido')}}">Menu Compras</a>
           </li>
         </ul>
 

@@ -31,3 +31,8 @@ Route::get('produto-menu', 'ProdutoController@menu')->name('menu-produto');
 Route::get('produto-index', 'ProdutoController@index')->name('index-produto');
 Route::get('produto-edit/{produto}', 'ProdutoController@edit')->name('edit-produto');
 Route::post('produto-update/{produto}', 'ProdutoController@update')->name('update-produto');
+
+//pedido
+Route::get('pedido-menu', 'PedidoController@menu')->name('menu-pedido');
+Route::get('pedido-selectProduto', 'PedidoController@selectProduto')->name('selectProduto-pedido');
+Route::get('pedido-selectProdutoQuant/{produtoId}', 'PedidoController@selectProdutoQuant')->name('selectProdutoQuant-pedido');

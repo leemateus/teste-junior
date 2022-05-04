@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Pedido;
+use App\Produto;
+use App\Cliente;
 use Illuminate\Http\Request;
 
 class PedidoController extends Controller
@@ -24,7 +26,7 @@ class PedidoController extends Controller
      */
     public function create()
     {
-        //
+      //
     }
 
     /**
@@ -81,5 +83,22 @@ class PedidoController extends Controller
     public function destroy(Pedido $pedido)
     {
         //
+    }
+
+    public function menu()
+    {
+      return view('pedido.menu_pedido');
+    }
+
+    public function selectProduto()
+    {
+      $produtos = Produto::get();
+
+      return view('pedido.listagem_produto', compact('produtos'));
+    }
+
+    public function selectProdutoQuant($produto)
+    {
+      $produto = Produto::where('id', '=', $produto)->first();      
     }
 }
