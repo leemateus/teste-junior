@@ -99,6 +99,8 @@ class PedidoController extends Controller
 
     public function selectProdutoQuant($produto)
     {
-      $produto = Produto::where('id', '=', $produto)->first();      
+      $produto = Produto::where('id', '=', $produto)->first();
+
+      return view('pedido.selecionar_quant_pedido', compact('produto'));
     }
 }
